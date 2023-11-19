@@ -40,7 +40,17 @@ h3 {
   font-size: 18px;
 }
 .info {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  line-height: 25px;
+}
+.forecast {
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
+  padding: 30px 0 30px 0;
+  line-height: 25px;
 }
 li {
   list-style: none;
