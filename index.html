@@ -14,17 +14,22 @@
     <title>Weather app</title>
   </head>
   <body>
-    <header>
-      <main>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="Search" />
-        </form>
-      </main>
-    </header>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <header>
+            <main>
+              <form class="search-form">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  required
+                  class="search-form-input"
+                />
+                <input type="submit" value="Search" class="submit-button" />
+              </form>
+            </main>
+          </header>
           <h1>City</h1>
           <ul class="date">
             <li class="date">Date</li>
@@ -93,21 +98,24 @@
             </div>
           </div>
         </div>
+        <footer>
+          This project was coded by
+          <a href="https://github.com/sandra3096" target="_blank"
+            >Sandra Bozovska</a
+          >, is
+          <a
+            href="https://github.com/sandra3096/weather-app-vanilla"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a
+            href="https://weather-app-vanilla-sandra.netlify.app/"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </footer>
       </div>
     </div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/sandra3096" target="_blank">Sandra Bozovska</a
-      >, is
-      <a
-        href="https://github.com/sandra3096/weather-app-vanilla"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://weather-app-vanilla-sandra.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
   </body>
 </html>
