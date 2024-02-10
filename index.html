@@ -34,8 +34,8 @@
           </header>
           <h1 class="weather-app-city" id="city"></h1>
           <ul class="date-info">
-            <li class="date">Date</li>
-            <li class="time">Time</li>
+            <li class="date" id="date-data"></li>
+            <li class="time" id="time-data"></li>
           </ul>
 
           <div class="info">
@@ -43,7 +43,7 @@
               <ul>
                 <li class="weather-app-temperature" id="temperature"></li>
                 <li class="weather-app-unit">°C</li>
-                <li class="description">Description</li>
+                <li class="description" id="weather-description"></li>
               </ul>
             </div>
             <div class="col">
@@ -54,8 +54,13 @@
             </div>
             <div class="col">
               <ul>
-                <li class="humidity">Humidity: <strong>0%</strong></li>
-                <li class="wind">Wind: <strong>0 km/h</strong></li>
+                <li class="humidity">
+                  Humidity: <span id="weather-humidity"></span>
+                </li>
+                <li class="wind">Wind: <span id="weather-wind"></span></li>
+                <li class="feels-like">
+                  Feels like: <span id="weather-feels-like"></span>
+                </li>
               </ul>
             </div>
           </div>
