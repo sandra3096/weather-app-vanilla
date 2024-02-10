@@ -1,31 +1,33 @@
 function refreshWeather(response) {
-  let temperatureElement = document.querySelector("#temperature");
-  let temperature = response.data.temperature.current;
+  let temperature = Math.round(response.data.temperature.current);
+  let temperatureUnit = "°C";
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#weather-humidity");
   let windElement = document.querySelector("#weather-wind");
   let feelsLikeElement = document.querySelector("#weather-feels-like");
-  let feelsLike = response.data.temperature.feels_like;
+  let feelsLike = Math.round(response.data.temperature.feels_like);
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#time-data");
   let dayElement = document.querySelector("#date-data");
   let iconElement = document.querySelector("#icon");
+  let temperatureAndUnitElement = document.querySelector(
+    "#temperature-and-unit"
+  );
+  let dayTime = formatDate(date) + " " + formatTime(date);
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
-  feelsLikeElement.innerHTML = `${Math.round(feelsLike)} °C`;
-  timeElement.innerHTML = formatTime(date);
-  dayElement.innerHTML = formatDate(date);
+  feelsLikeElement.innerHTML = `${feelsLike} ${temperatureUnit}`;
+  dayElement.innerHTML = dayTime;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon">`;
+  temperatureAndUnitElement.innerHTML = `${temperature}${temperatureUnit}`;
 }
 
 function formatTime(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
-
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -33,8 +35,6 @@ function formatTime(date) {
 }
 
 function formatDate(date) {
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -63,3 +63,5 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Cork");

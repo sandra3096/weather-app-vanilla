@@ -33,18 +33,27 @@ h2 {
 }
 .date {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
-h3 {
-  text-align: center;
-  font-size: 18px;
-}
+
 .info {
   display: flex;
   justify-content: space-evenly;
   padding-top: 30px;
   line-height: 25px;
 }
+.temperature {
+  padding-top: 15px;
+  font-size: 35px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.weather-info {
+  font-size: 15px;
+  padding-top: 15px;
+}
+
 .forecast {
   display: flex;
   justify-content: space-evenly;
