@@ -45,7 +45,7 @@ h2 {
   line-height: 25px;
 }
 .temperature {
-  padding-top: 15px;
+  padding-top: 28px;
   font-size: 45px;
   margin-top: 10px;
   text-align: center;
@@ -75,7 +75,7 @@ ul {
   padding: 0;
 }
 .temperature {
-  font-size: 25px;
+  font-size: 30px;
 }
 .description {
   font-size: 15px;

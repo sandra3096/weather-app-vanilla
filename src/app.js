@@ -21,7 +21,7 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
   feelsLikeElement.innerHTML = `${feelsLike} ${temperatureUnit}`;
   dayElement.innerHTML = dayTime;
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon">`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" width="120">`;
   temperatureAndUnitElement.innerHTML = `${temperature}${temperatureUnit}`;
 
   getForecast(response.data.city);
