@@ -80,6 +80,16 @@ ul {
 .description {
   font-size: 15px;
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.weather-forecast-day {
+  margin: 10px;
+}
 .forecast-temperature-min {
   opacity: 0.7;
   font-size: 13px;

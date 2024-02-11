@@ -61,7 +61,37 @@ function handleSearchSubmit(event) {
   searchCity(city);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class = "weather-forecast-day">
+     <div class="forecast-date">${day}</div>
+     <div class="forecast-icon">
+       <img
+         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
+         alt=""
+         width="55"
+       />
+     </div>
+     <div class="forecast-temperature">
+       <span class="forecast-temperature-max">18</span>/
+       <span class="forecast-temperature-min">6</span>
+     </div>
+    </div>
+`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cork");
+displayForecast();
